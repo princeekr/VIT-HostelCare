@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hostel Complaint Management System - Design System
+   Color Palette: Professional blue/slate with clear status indicators
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 217 91% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 50%;
+
+    --radius: 0.5rem;
+
+    /* Status Colors */
+    --status-pending: 38 92% 50%;
+    --status-pending-bg: 38 92% 95%;
+    --status-in-progress: 217 91% 50%;
+    --status-in-progress-bg: 217 91% 95%;
+    --status-waiting: 38 92% 45%;
+    --status-waiting-bg: 38 92% 92%;
+    --status-resolved: 142 71% 45%;
+    --status-resolved-bg: 142 71% 95%;
+
+    /* Priority Colors */
+    --priority-low: 215 16% 47%;
+    --priority-low-bg: 210 40% 96%;
+    --priority-medium: 38 92% 50%;
+    --priority-medium-bg: 38 92% 95%;
+    --priority-high: 0 84% 60%;
+    --priority-high-bg: 0 84% 95%;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 217 91% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 217 91% 50%;
+  }
+
+  .dark {
+    --background: 222 47% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 217 91% 60%;
+
+    /* Status Colors - Dark */
+    --status-pending: 38 92% 50%;
+    --status-pending-bg: 38 92% 15%;
+    --status-in-progress: 217 91% 60%;
+    --status-in-progress-bg: 217 91% 15%;
+    --status-waiting: 38 92% 50%;
+    --status-waiting-bg: 38 92% 12%;
+    --status-resolved: 142 71% 45%;
+    --status-resolved-bg: 142 71% 15%;
+
+    /* Priority Colors - Dark */
+    --priority-low: 215 20% 65%;
+    --priority-low-bg: 217 33% 17%;
+    --priority-medium: 38 92% 50%;
+    --priority-medium-bg: 38 92% 15%;
+    --priority-high: 0 84% 60%;
+    --priority-high-bg: 0 84% 15%;
+
+    /* Sidebar - Dark */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border shadow-sm;
+  }
+  
+  .status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+}
